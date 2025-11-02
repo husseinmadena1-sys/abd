@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>إلى صديقي عبدالجبار عماد جابر</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@300;400;700&display=swap');
+    :root{--bg1:#1e2a47;--bg2:#34496e;--card:#f8faff;--accent:#88b3ff}
+    html,body{height:100%;margin:0;font-family:'Cairo',sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#fff}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px}
+    .card{width:100%;max-width:820px;background:radial-gradient(circle at 10% 10%, rgba(255,255,255,0.05), rgba(255,255,255,0.01)),linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.03));border-radius:18px;padding:34px;box-shadow:0 10px 30px rgba(0,0,0,0.45);position:relative;overflow:hidden}
+    h1{margin:0 0 10px 0;font-size:28px;letter-spacing:0.6px}
+    .meta{font-size:14px;opacity:0.9;margin-bottom:20px}
+    .message{background:rgba(255,255,255,0.04);border-radius:12px;padding:22px;line-height:1.9;font-size:18px;color:#fff}
+    .signature{text-align:left;margin-top:20px;font-weight:700}
+    .controls{display:flex;gap:10px;margin-top:18px;align-items:center}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.2);padding:10px 14px;border-radius:10px;backdrop-filter:blur(4px);cursor:pointer;color:#fff}
+    .small{font-size:13px;opacity:0.9}
+    footer{margin-top:18px;text-align:center;font-size:13px;opacity:0.9}
+    @media (max-width:600px){.card{padding:18px}.message{font-size:17px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main">
+      <h1>إلى صديقي العزيز عبدالجبار عماد جابر</h1>
+      <div class="meta">رفيق العمر منذ 14 سنة — كلمات من القلب</div>
+
+      <div class="message" id="message">
+        <p>عبدالجبار، رفيقي العزيز، يمكن الكلام ما يوصف شلون وجودك بحياتي كان نعمة حقيقية. أربعة عشر سنة مرت، بس كأنها يوم، لأن العشرة الصافية تخلي الزمن يمر بسرعة وبدفء. من أول يوم عرفتك، حسّيت إنك مو مجرد صديق، إنت أخ ما جبته أمي بس جابه القدر.</p>
+
+        <p>مرّت بينا أيام فرح، وأيام تعب، ووقفات ما ينساها القلب. يمكن ما نحچي كل يوم، بس أعرف إنك دايم بخاطري، مثل ظلّ ما يفارق صاحبه. كل مرة أتذكر مواقفنا القديمة، سوالفنا، ضحكنا، وحتى الزعل اللي كان يخلص بنكتة، أحس إن العمر ما يضيع دام بيه ناس مثلك.</p>
+
+        <p>عبدالجبار، أربعطعش سنة صداقة مو رقم، هذا عمر كامل من الثقة، المواقف، الدعم، والاحترام. علّمتني معنى الأخوّة، معنى الرجولة، ومعنى إن الصديق الحقيقي ما يبتعد، حتى لو تغيرت الدنيا.</p>
+
+        <p>أنت مو بس صديق، إنت ركن من حياتي، وجودك يطمن، وضحكتك تفرّح، ونصيحتك دايم تخليني أراجع نفسي وأكون أحسن. ومو مرة ولا مرتين، كنت بيها سبب إن أتجاوز تعب أو موقف صعب. وجودك بهالعمر الطويل خلاني أثق أكثر إن الصداقة الحقيقية ما تموت.</p>
+
+        <p>أتمنى تبقى دايم بخير، وتتحقق كل طموحاتك، وتبقى مثل ما عرفتك — نية طيبة، قلب نضيف، وضحكة صافية. والله يديم العشرة بينا للأبد، وتبقى صديقي اللي أفتخر بيه أمام الكل.</p>
+
+        <p>عبدالجبار، شكراً على كل سنة مرت وياي، شكراً على كل موقف ساندتني بيه، شكراً على كل ضحكة جمعتنا، وكل صمت فهمنا بيه بعض بدون ما نحچي.</p>
+
+        <p class="signature">أخوك للأبد،<br>حسين</p>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="playBtn">تشغيل الموسيقى ▶</button>
+        <button class="btn" id="pauseBtn">إيقاف ◼</button>
+        <div class="small">إذا ما اشتغلت الموسيقى تلقائياً، اضغط تشغيل.</div>
+      </div>
+
+      <footer class="small">رسالة وفاء ومحبة لصداقة عمرها 14 سنة.</footer>
+
+      <audio id="bgm" src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" loop preload="auto"></audio>
+
+    </div>
+  </div>
+
+  <script>
+    const bgm = document.getElementById('bgm');
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+
+    playBtn.addEventListener('click', async ()=>{
+      try{ await bgm.play(); }catch(e){ console.log('autoplay blocked'); }
+    });
+    pauseBtn.addEventListener('click', ()=> bgm.pause());
+
+    window.addEventListener('load', ()=>{
+      bgm.play().catch(()=>console.log('autoplay blocked'));
+    });
+  </script>
+</body>
+</html>
